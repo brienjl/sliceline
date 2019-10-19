@@ -1,5 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
+import { foods } from "../Data/FoodData";
 
 const MenuStyled = styled.div`
     border: 2px solid black;
@@ -7,5 +8,9 @@ const MenuStyled = styled.div`
     margin: 0px 400px 50px 20px;
 `
 export function Menu(){
-    return<MenuStyled/>
+    return <MenuStyled>
+        {foods.map(food => (
+            <div>{food.name}</div>
+        ))}
+    </MenuStyled>;
 }

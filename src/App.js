@@ -19,8 +19,8 @@ function App() {
     <>
       <GlobalStyle/>
       <Navbar/>
-      <Banner></Banner>
-      <Menu></Menu>
+      <Banner/>
+      <Menu/>
       <div>Sliceline</div>
     </>
   );
