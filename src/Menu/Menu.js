@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { foods } from "../Data/FoodData";
+import { Food, FoodGrid, FoodLabel } from "./FoodGrid"
 
 const MenuStyled = styled.div`
     border: 2px solid black;
@@ -9,8 +10,16 @@ const MenuStyled = styled.div`
 `
 export function Menu(){
     return <MenuStyled>
+        <h1>Menu</h1>
+        <FoodGrid>
         {foods.map(food => (
-            <div>{food.name}</div>
+            <Food img={food.img}>
+                <FoodLabel>
+                {food.name}
+                </FoodLabel>
+                
+            </Food>
         ))}
+        </FoodGrid>
     </MenuStyled>;
 }
